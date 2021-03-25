@@ -1,0 +1,29 @@
+package com.company;
+
+public class BulkDiscount extends DiscountPolicy{
+
+    public float discount;
+
+    public float percent;
+    public int minimum;
+
+    public BulkDiscount(int minimum , float percent) {
+        this.minimum = minimum;
+        this.percent = percent;
+    }
+
+    @Override
+    public double computeDiscount(int count, int itemCost) {
+        if (count >= minimum) {
+            System.out.println("discount percentage is " + percent);
+            //System.out.println("discounted price is" + discountedPrice);
+        }
+        else
+            System.out.println("does not qualify for discount");
+        double discountedPrice = (itemCost*percent) * count;
+
+        return discountedPrice;
+
+    }
+
+}
