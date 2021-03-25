@@ -1,0 +1,6 @@
+package com.company;
+
+public interface MessageEncoder {
+
+    public abstract StringBuffer encode(String plainText);
+}
