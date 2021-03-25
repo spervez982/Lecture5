@@ -1,0 +1,10 @@
+package com.company;
+
+    public abstract class PayCalculator {
+        public int payRate = 50;
+
+        public double computePay(int hours) {
+            int baseAmount = payRate * hours;
+            return baseAmount;
+        }
+    }
