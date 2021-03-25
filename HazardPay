@@ -1,0 +1,11 @@
+package com.company;
+
+public class HazardPay extends PayCalculator{
+
+    @Override
+    public double computePay(int hours) {
+        double newAmount = super.computePay(hours);
+        double multipliedAmount = newAmount * 1.5;
+        return multipliedAmount;
+    }
+}
